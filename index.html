@@ -4,287 +4,88 @@
     <meta charset="UTF-8">
     <title>Лингвистический кружок 57 школы</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap & Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .navbar-brand {
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
-        .jumbotron {
-            background-color: #ffffff;
-            border-radius: 0.5rem;
-            box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.05);
-            padding: 2rem 2rem;
-        }
-        .jumbotron.bg-soft {
-            background-color: #f0f4f8;
-        }
-        .schedule-card {
-            transition: 0.15s ease-in-out;
-            border-left: 4px solid #6c757d;
-        }
-        .schedule-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
-        }
-        .schedule-card .card-title {
-            font-weight: 500;
-        }
-        .badge-archive {
-            background-color: #e9ecef;
-            color: #495057;
-            font-weight: 400;
-        }
-        .badge-upcoming {
-            background-color: #cfe2ff;
-            color: #084298;
-        }
-        .footer-email {
-            font-size: 0.95rem;
-        }
-        .nav-link i {
-            margin-right: 6px;
-        }
-        .section-title {
-            font-weight: 400;
-            letter-spacing: -0.3px;
-            border-bottom: 2px solid #dee2e6;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
+        body { background-color: #f8f9fa; }
+        .navbar-brand { font-weight: 600; }
+        .jumbotron { background-color: #ffffff; border-radius: 0.5rem; padding: 2rem; }
+        .section-title { border-bottom: 2px solid #dee2e6; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
     </style>
 </head>
 <body>
 
-    <!-- НАВИГАЦИЯ -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="bi bi-chat-quote-fill text-primary"></i> Лингвокружок 57
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="bi bi-house-door"></i> Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#schedule-2024"><i class="bi bi-clock-history"></i> 2024–2025</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#schedule-2025-56"><i class="bi bi-clock-history"></i> 2025–2026 6-7И</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#schedule-2025-5"><i class="bi bi-clock-history"></i> 2025–2026 5И</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#schedule-2026"><i class="bi bi-calendar-plus"></i> 2026–2027</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects"><i class="bi bi-diagram-3"></i> Проекты</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#materials"><i class="bi bi-paperclip"></i> Материалы</a></li>
+<!-- НАВИГАЦИЯ (ОБЩАЯ ДЛЯ ВСЕХ СТРАНИЦ) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-chat-quote-fill text-primary"></i> Лингвокружок 57</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2024-2025.html"><i class="bi bi-clock-history"></i> 2024–2025</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-67.html"><i class="bi bi-clock-history"></i> 2025–2026 6-7И</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-5.html"><i class="bi bi-clock-history"></i> 2025–2026 5И</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2026-2027.html"><i class="bi bi-calendar-plus"></i> 2026–2027</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-diagram-3"></i> Проекты</a></li>
+                <li class="nav-item"><a class="nav-link" href="materials.html"><i class="bi bi-paperclip"></i> Материалы</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ГЛАВНАЯ -->
+<main class="container py-4">
+    <div class="jumbotron">
+        <h1 class="display-5 text-center">🧭 Лингвистический кружок <br><span class="text-primary">57-й школы</span></h1>
+        <p class="lead text-center text-muted">для 5–7 классов</p>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h5><i class="bi bi-people-fill text-primary"></i> Кто мы?</h5>
+                <p>Мы — лингвистический кружок при 57-й школе. Здесь собираются ученики 5–7 классов, которым интересно, как устроен язык: от звуков до смыслов, от русской грамматики до типологии разных языков.</p>
+                <h5><i class="bi bi-compass-fill text-primary"></i> Почему кружок?</h5>
+                <p>Слово <i>кружок</i> подчёркивает дружескую, исследовательскую атмосферу. Мы не боимся сложных вопросов и учимся видеть лингвистику повсюду.</p>
+            </div>
+            <div class="col-md-6">
+                <h5><i class="bi bi-puzzle-fill text-primary"></i> Чем занимаемся?</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-check2-circle text-success"></i> Разбираем фонетику и морфологию</li>
+                    <li><i class="bi bi-check2-circle text-success"></i> Сравниваем языки и диалекты</li>
+                    <li><i class="bi bi-check2-circle text-success"></i> Собираем собственные корпуса текстов</li>
+                    <li><i class="bi bi-check2-circle text-success"></i> Готовим проекты для конференций</li>
+                    <li><i class="bi bi-check2-circle text-success"></i> Играем в лингвистические игры</li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <main class="container py-4">
-
-        <!-- ГЛАВНАЯ / О КРУЖКЕ -->
-        <div class="jumbotron bg-white">
-            <h1 class="display-5 text-center">Лингвистический кружок <br> <span class="text-primary">57-й школы</span></h1>
-            <p class="lead text-center text-muted">для 5–7 классов</p>
-            <hr class="my-4">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5><i class="bi bi-people-fill text-primary"></i> Кто мы?</h5>
-                    <p>Мы — лингвистический кружок при 57-й школе. Здесь собираются ученики 5–7 классов, которым интересно, как устроен язык: от звуков до смыслов, от русской грамматики до типологии разных языков.</p>
-                    <h5><i class="bi bi-compass-fill text-primary"></i> Почему кружок?</h5>
-                    <p>Слово <i>кружок</i> подчёркивает дружескую, исследовательскую атмосферу. Мы не боимся сложных вопросов и учимся видеть лингвистику повсюду.</p>
-                </div>
-                <div class="col-md-6">
-                    <h5><i class="bi bi-puzzle-fill text-primary"></i> Чем занимаемся?</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="bi bi-check2-circle text-success"></i> Разбираем фонетику и морфологию</li>
-                        <li><i class="bi bi-check2-circle text-success"></i> Сравниваем языки и диалекты</li>
-                        <li><i class="bi bi-check2-circle text-success"></i> Собираем собственные корпуса текстов</li>
-                        <li><i class="bi bi-check2-circle text-success"></i> Готовим проекты для конференций</li>
-                        <li><i class="bi bi-check2-circle text-success"></i> Играем в лингвистические игры</li>
-                    </ul>
-                </div>
+    <!-- НОВОСТИ -->
+    <div class="jumbotron bg-white">
+        <h1 class="display-5 text-center">📰 Новости кружка</h1>
+        <hr class="my-4">
+        <div class="media">
+            <img src="static/calend.png" class="align-self-start mr-3" alt="календарь" width="64" height="64">
+            <div class="media-body">
+                <h5 class="mt-0">Вышел новый сборник исследований кружка</h5>
+                <p>В сборник вошли статьи по фонетике, морфологии и синтаксису — результаты работы кружка за 2024–2025 учебный год.</p>
             </div>
         </div>
+    </div>
+</main>
 
-        <!-- РАСПИСАНИЯ -->
-        <h2 class="section-title"><i class="bi bi-calendar3 text-primary"></i> Расписания занятий</h2>
-
-        <!-- 1. 2024-2025 5-6И -->
-        <div class="card schedule-card mb-3" id="schedule-2024">
-            <div class="card-body">
-                <div class="d-flex flex-wrap align-items-center justify-content-between">
-                    <h5 class="card-title mb-0"><i class="bi bi-archive text-secondary"></i> Архив 2024–2025 — 5–6 И классы</h5>
-                    <span class="badge badge-archive">Архив</span>
-                </div>
-                <p class="card-text text-muted small mt-2">Занятия проходили по пятницам 16:00–17:30, ауд. 214.</p>
-                <div class="row no-gutters mt-2">
-                    <div class="col-auto"><span class="badge badge-light mr-2">сентябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">октябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">ноябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">декабрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">февраль</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">март</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">апрель</span></div>
-                </div>
-                <details class="mt-2">
-                    <summary class="text-primary small" style="cursor:pointer;">Полное расписание</summary>
-                    <ul class="list-unstyled small mt-2">
-                        <li><i class="bi bi-dot"></i> 06.09 — Вводное занятие. Что такое лингвистика?</li>
-                        <li><i class="bi bi-dot"></i> 13.09 — Фонетика: звуки и буквы</li>
-                        <li><i class="bi bi-dot"></i> 20.09 — Морфемика: корни, суффиксы, окончания</li>
-                        <li><i class="bi bi-dot"></i> 27.09 — Части речи: имя существительное</li>
-                        <li><i class="bi bi-dot"></i> 04.10 — Глагол: время и вид</li>
-                        <li><i class="bi bi-dot"></i> ... и ещё 12 занятий (полный архив доступен по запросу)</li>
-                    </ul>
-                </details>
-            </div>
-        </div>
-
-        <!-- 2. 2025-2026 6-7И -->
-        <div class="card schedule-card mb-3" id="schedule-2025-56">
-            <div class="card-body">
-                <div class="d-flex flex-wrap align-items-center justify-content-between">
-                    <h5 class="card-title mb-0"><i class="bi bi-archive text-secondary"></i> Архив 2025–2026 — 6–7 И классы</h5>
-                    <span class="badge badge-archive">Архив</span>
-                </div>
-                <p class="card-text text-muted small mt-2">Занятия по вторникам 17:00–18:30, ауд. 305 (каб. лингвистики).</p>
-                <div class="row no-gutters mt-2">
-                    <div class="col-auto"><span class="badge badge-light mr-2">сентябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">октябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">ноябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">январь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">февраль</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">март</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">апрель</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">май</span></div>
-                </div>
-                <details class="mt-2">
-                    <summary class="text-primary small" style="cursor:pointer;">Полное расписание</summary>
-                    <ul class="list-unstyled small mt-2">
-                        <li><i class="bi bi-dot"></i> 03.09 — Синтаксис: словосочетание и предложение</li>
-                        <li><i class="bi bi-dot"></i> 10.09 — Типы связи: согласование, управление, примыкание</li>
-                        <li><i class="bi bi-dot"></i> 17.09 — Главные и второстепенные члены</li>
-                        <li><i class="bi bi-dot"></i> 24.09 — Односоставные предложения</li>
-                        <li><i class="bi bi-dot"></i> 01.10 — Сложное предложение: союзное и бессоюзное</li>
-                        <li><i class="bi bi-dot"></i> 08.10 — Практикум по синтаксическому разбору</li>
-                        <li><i class="bi bi-dot"></i> ... полный архив 2025–2026 (6-7И) выложен в закрытом разделе.</li>
-                    </ul>
-                </details>
-            </div>
-        </div>
-
-        <!-- 3. 2025-2026 5И -->
-        <div class="card schedule-card mb-3" id="schedule-2025-5">
-            <div class="card-body">
-                <div class="d-flex flex-wrap align-items-center justify-content-between">
-                    <h5 class="card-title mb-0"><i class="bi bi-archive text-secondary"></i> Архив 2025–2026 — 5 И класс</h5>
-                    <span class="badge badge-archive">Архив</span>
-                </div>
-                <p class="card-text text-muted small mt-2">Занятия по средам 15:30–17:00, ауд. 108.</p>
-                <div class="row no-gutters mt-2">
-                    <div class="col-auto"><span class="badge badge-light mr-2">сентябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">октябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">ноябрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">декабрь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">январь</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">февраль</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">март</span></div>
-                    <div class="col-auto"><span class="badge badge-light mr-2">апрель</span></div>
-                </div>
-                <details class="mt-2">
-                    <summary class="text-primary small" style="cursor:pointer;">Полное расписание</summary>
-                    <ul class="list-unstyled small mt-2">
-                        <li><i class="bi bi-dot"></i> 04.09 — Введение в лингвистику для пятиклассников</li>
-                        <li><i class="bi bi-dot"></i> 11.09 — Алфавит и звуки: транскрипция</li>
-                        <li><i class="bi bi-dot"></i> 18.09 — Слоги и ударение</li>
-                        <li><i class="bi bi-dot"></i> 25.09 — Имя существительное: род, число, падеж</li>
-                        <li><i class="bi bi-dot"></i> 02.10 — Имя прилагательное</li>
-                        <li><i class="bi bi-dot"></i> 09.10 — Глагол: начальная форма</li>
-                        <li><i class="bi bi-dot"></i> 16.10 — Спряжение глаголов</li>
-                        <li><i class="bi bi-dot"></i> ... остальные занятия в архиве.</li>
-                    </ul>
-                </details>
-            </div>
-        </div>
-
-        <!-- 4. 2026-2027 (предварительное) -->
-        <div class="card schedule-card mb-4 border-info" id="schedule-2026">
-            <div class="card-body">
-                <div class="d-flex flex-wrap align-items-center justify-content-between">
-                    <h5 class="card-title mb-0"><i class="bi bi-clock text-info"></i> Предварительное расписание 2026–2027</h5>
-                    <span class="badge badge-upcoming">Скоро</span>
-                </div>
-                <p class="card-text mt-2 text-secondary">Расписание на новый учебный год будет опубликовано после утверждения. Ориентировочное начало занятий — сентябрь 2026.</p>
-                <div class="alert alert-light border border-info small mt-2" role="alert">
-                    <i class="bi bi-info-circle-fill text-info"></i> Следите за обновлениями на этой странице.
-                </div>
-            </div>
-        </div>
-
-        <!-- ПРОЕКТЫ -->
-        <h2 class="section-title mt-5" id="projects"><i class="bi bi-diagram-3 text-primary"></i> Проекты участников</h2>
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h6 class="card-title"><i class="bi bi-book text-primary"></i> «Говорим по-русски»</h6>
-                        <p class="card-text small">#</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h6 class="card-title"><i class="bi bi-translate text-primary"></i> «Лингвистический детектив»</h6>
-                        <p class="card-text small">#</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h6 class="card-title"><i class="bi bi-pie-chart-fill text-primary"></i> «Звуковой портрет школы»</h6>
-                        <p class="card-text small">#</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ -->
-        <h2 class="section-title mt-4" id="materials"><i class="bi bi-paperclip text-primary"></i> Дополнительные материалы</h2>
-        <div class="list-group mb-4">
-            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                <span><i class="bi bi-file-pdf text-danger"></i> #</span>
-                <span class="badge badge-secondary">PDF</span>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                <span><i class="bi bi-file-text text-primary"></i> #</span>
-                <span class="badge badge-secondary">DOCX</span>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                <span><i class="bi bi-link-45deg text-success"></i> #</span>
-                <span class="badge badge-secondary">ссылки</span>
-            </a>
-        </div>
-
-    </main>
-
-    <!-- ФУТЕР -->
-    <footer class="container text-center border-top pt-3 mt-3 pb-4">
-        <p class="text-muted small footer-email">
-            <i class="bi bi-envelope-fill"></i> По всем вопросам: 
-            <a href="mailto:lingvo57@school57.ru" class="text-muted">lingvo57@school57.ru</a>
-        </p>
-        <p class="text-muted small">&copy; 2026 Лингвистический кружок 57-й школы</p>
-    </footer>
+<!-- ФУТЕР -->
+<footer class="container text-center border-top pt-3 mt-3 pb-4">
+    <p class="text-muted small">
+        <i class="bi bi-envelope-fill"></i> По всем вопросам: 
+        <a href="mailto:lingvo57@school57.ru" class="text-muted">lingvo57@school57.ru</a>
+    </p>
+    <p class="text-muted small">&copy; 2026 Лингвистический кружок 57-й школы</p>
+</footer>
 
 </body>
 </html>
