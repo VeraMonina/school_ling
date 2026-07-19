@@ -34,9 +34,6 @@
             letter-spacing: -0.3px;
             font-size: 1.15rem;
         }
-        .navbar-brand i {
-            color: #3a7abd;
-        }
         .nav-link {
             color: #2a4a6a !important;
             font-weight: 450;
@@ -49,49 +46,12 @@
             background: rgba(58, 122, 189, 0.10);
             color: #1a4a7a !important;
         }
-        .nav-link i {
-            margin-right: 4px;
-            color: #5a8ab5;
-        }
-
-
-        /* ===== НАВИГАЦИЯ ===== */
-        .navbar {
-            background: rgba(255, 248, 240, 0.92) !important;
-            backdrop-filter: blur(6px);
-            box-shadow: 0 2px 20px rgba(180, 120, 80, 0.08);
-            border-bottom: 1px solid rgba(230, 190, 160, 0.25);
-        }
-        .navbar-brand {
-            font-weight: 600;
-            color: #8b5a3c !important;
-            letter-spacing: -0.3px;
-        }
-        .navbar-brand i {
-            color: #c6794a;
-        }
-        .nav-link {
-            color: #5a4033 !important;
-            font-weight: 450;
-            transition: 0.2s;
-            border-radius: 30px;
-            padding: 0.4rem 1rem;
-        }
-        .nav-link:hover {
-            background: rgba(198, 121, 74, 0.10);
-            color: #7a4d2e !important;
-        }
-        .nav-link i {
-            margin-right: 6px;
-            color: #b8856a;
-        }
         .nav-item.active .nav-link {
-            background: rgba(198, 121, 74, 0.12);
-            color: #7a4d2e !important;
+            background: rgba(58, 122, 189, 0.12);
+            color: #1a4a7a !important;
         }
 
         /* ===== ДЖАМБОТРОНЫ ===== */
-       /* ===== ДЖАМБОТРОНЫ ===== */
         .jumbotron {
             background: #ffffff;
             border-radius: 24px;
@@ -99,10 +59,6 @@
             box-shadow: 0 8px 40px rgba(30, 80, 140, 0.07), 0 2px 8px rgba(30, 80, 140, 0.03);
             border: 1px solid rgba(180, 210, 235, 0.25);
             transition: 0.2s;
-        }
-        .jumbotron-warm {
-            background: linear-gradient(145deg, #f0f6fc, #e3edf7);
-            border: 1px solid rgba(160, 200, 235, 0.3);
         }
 
         /* ===== ЗАГОЛОВКИ ===== */
@@ -118,13 +74,7 @@
             color: #3a7abd !important;
             font-weight: 650;
         }
-        .section-title {
-            border-bottom: 2px solid #c5d9eb;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            color: #1a3a5a;
-        }
-        
+
         /* ===== ТЕКСТ ===== */
         p, li {
             color: #2a4055;
@@ -135,31 +85,55 @@
         }
 
         /* ===== КАРТОЧКИ ===== */
-        .feature-icon {
-            font-size: 1.4rem;
-            color: #3a7abd;
-            width: 2rem;
-            text-align: center;
-        }
-        .highlight-box {
-            background: #eaf1f9;
+        .project-card {
+            transition: 0.25s ease-in-out;
+            border-left: 4px solid #3a7abd;
             border-radius: 16px;
-            padding: 1.5rem 1.8rem;
-            border-left: 4px solid #4a8acd;
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(30, 80, 140, 0.06);
+            border: 1px solid rgba(180, 210, 235, 0.25);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
-        .badge-soft {
-            background: #d5e3f0;
-            color: #1a4a7a;
-            padding: 0.35rem 0.9rem;
-            border-radius: 40px;
-            font-weight: 450;
-            font-size: 0.8rem;
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(30, 80, 140, 0.10);
+            border-color: rgba(58, 122, 189, 0.3);
+        }
+        .project-card .card-body {
+            flex: 1 1 auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card .card-title {
+            font-weight: 550;
+            font-size: 1.05rem;
+            color: #1a3a5a;
+        }
+        .project-card .card-subtitle {
+            color: #5a7a95 !important;
+        }
+        .project-card .card-text {
+            color: #2a4055;
+            flex: 1 1 auto;
+        }
+        .project-card .card-footer {
+            padding: 0.75rem 1.5rem 1.25rem;
+            background: transparent !important;
+            border: none !important;
+            border-top: 1px solid #e8eef4 !important;
+            margin-top: auto;
+        }
+        .project-card .card-footer small {
+            color: #5a7a95 !important;
         }
 
         /* ===== КНОПКИ ===== */
         .btn-outline-primary-custom {
-            color: #8b5a3c;
-            border: 1px solid #dbb8a0;
+            color: #1a4a7a;
+            border: 1px solid #b0cfe0;
             background: transparent;
             border-radius: 40px;
             padding: 0.25rem 1.2rem;
@@ -167,11 +141,13 @@
             font-weight: 450;
             transition: 0.2s;
             cursor: pointer;
+            align-self: flex-start;
+            margin-top: 0.5rem;
         }
         .btn-outline-primary-custom:hover {
-            background: #f5e8de;
-            border-color: #c6794a;
-            color: #7a4d2e;
+            background: #eaf1f9;
+            border-color: #3a7abd;
+            color: #1a4a7a;
         }
 
         /* ===== ДОПОЛНИТЕЛЬНЫЙ БЛОК ===== */
@@ -179,7 +155,7 @@
             display: none;
             margin-top: 0.75rem;
             padding-top: 0.75rem;
-            border-top: 1px solid #ecd9cb;
+            border-top: 1px solid #d5e3f0;
             font-size: 0.9rem;
         }
         .extra-details ul {
@@ -187,22 +163,22 @@
             margin-bottom: 0.3rem;
         }
         .extra-details ul li {
-            color: #5a4033;
+            color: #2a4055;
         }
 
         /* ===== ФУТЕР ===== */
         footer {
-            border-top: 1px solid #ecd9cb !important;
+            border-top: 1px solid #c5d9eb !important;
             padding-top: 1.5rem;
             margin-top: 2rem;
         }
         footer a {
-            color: #8a6b56 !important;
+            color: #3a6a95 !important;
             transition: 0.2s;
             text-decoration: none;
         }
         footer a:hover {
-            color: #b67344 !important;
+            color: #3a7abd !important;
             text-decoration: underline;
         }
         .contact-icon {
@@ -231,11 +207,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule-2026-2027.html"></i>2026–27</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2026-2027.html">2026–27</a></li>
                 <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-67.html">Архив 2025–26 стр.</a></li>
                 <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-5.html">Архив 2025–26 млд.</a></li>
                 <li class="nav-item"><a class="nav-link" href="schedule-2024-2025.html">Архив 2024–25</a></li>
-                <li class="nav-item active"><a class="nav-link" href="projects.html"></i>Проекты</a></li>
+                <li class="nav-item active"><a class="nav-link" href="projects.html">Проекты</a></li>
                 <li class="nav-item"><a class="nav-link" href="materials.html">Дополнительные материалы</a></li>
             </ul>
         </div>
@@ -249,15 +225,15 @@
         <h1 class="display-5">
             Проекты участников кружка
         </h1>
-        <hr class="my-4" style="border-color: #e2cfbf;">
+        <hr class="my-4" style="border-color: #c5d9eb;">
 
         <div class="row">
 
             <!-- Проект 1 (с кнопкой Подробнее) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Замечаемость деривационных ошибок учениками 5-11 классов»</h5>
+                        <h5 class="card-title">«Замечаемость деривационных ошибок учениками 5-11 классов»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">старшая группа, 2025-2026</h6>
                         <p class="card-text small">В рамках исследования были отобраны примеры из корпуса RLC, составлены анкеты и проведён эксперимент с участием школьников и взрослых.</p>
 
@@ -266,7 +242,7 @@
                             <ul class="small">
                                 <li>способность замечать и исправлять ошибки растёт с возрастом — от 52% у 5–7 классов до 85% у взрослых;</li>
                                 <li>чем чаще в языке встречается правильное слово, тем легче распознать его ошибочную форму;</li>
-                                <li>если слова длиннее своего нормативного дуплета, то они хуже «считываются» как ошибочные..</li>
+                                <li>если слова длиннее своего нормативного дуплета, то они хуже «считываются» как ошибочные.</li>
                             </ul>
                             <p class="small text-muted-custom mb-0">Проект был представлен 28-ого апреля на <b>международной конференции «Русский язык в многоязычном мире»</b>, которую ежегодно проводит Высшая школа экономики.</p>
                         </div>
@@ -280,13 +256,12 @@
             </div>
 
             <!-- Проект 2 (без кнопки) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Вариативность в чтении примеров с умножением»</h5>
+                        <h5 class="card-title">«Вариативность в чтении примеров с умножением»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">младшая группа, 2025-2026</h6>
-                        <p class="card-text small">Была составлена анкета, в которой ребята смотрели на то, как школьники читают взлух математические выражения. 
-                        Пример: 2*2 (дважды два; два на два; два умножить на два)</p>
+                        <p class="card-text small">Была составлена анкета, в которой ребята смотрели на то, как школьники читают вслух математические выражения. Пример: 2*2 (дважды два; два на два; два умножить на два).</p>
                     </div>
                     <div class="card-footer">
                         <small>Выполнили: Руслан Садыков 5И, Тимофей Халипов 5И</small>
@@ -295,10 +270,10 @@
             </div>
 
             <!-- Проект 3 (без кнопки) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Род аббревиатур русского языка»</h5>
+                        <h5 class="card-title">«Род аббревиатур русского языка»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">младшая группа, 2025-2026</h6>
                         <p class="card-text small">Были выявлены «проблемные» аббревиатуры, и на их основании был проведен опрос.</p>
                     </div>
@@ -309,10 +284,10 @@
             </div>
 
             <!-- Проект 4 (без кнопки) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Исследование использования второго родительного падежа»</h5>
+                        <h5 class="card-title">«Исследование использования второго родительного падежа»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">младшая группа, 2025-2026</h6>
                         <p class="card-text small">Анализ конкуренции форм слов, которые могут стоять как в первом родительном падеже, так и во втором родительном.</p>
                     </div>
@@ -323,10 +298,10 @@
             </div>
 
             <!-- Проект 5 (без кнопки) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Исследование прилагательных «туристический» vs «туристский»»</h5>
+                        <h5 class="card-title">«Исследование прилагательных «туристический» vs «туристский»»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">5И-6И, 2024-2025</h6>
                         <p class="card-text small">Различия в употреблении и сочетаемости слов «туристический» и «туристский».</p>
                     </div>
@@ -337,10 +312,10 @@
             </div>
 
             <!-- Проект 6 (без кнопки) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Склонение составных числительных в косвенных падежах»</h5>
+                        <h5 class="card-title">«Склонение составных числительных в косвенных падежах»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">5И-6И, 2024-2025</h6>
                         <p class="card-text small">Исследование особенностей склонения сложных числительных, в которых часто допускают ошибки.</p>
                     </div>
@@ -351,10 +326,10 @@
             </div>
 
             <!-- Проект 7 (без кнопки) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Род существительных латте и эспрессо»</h5>
+                        <h5 class="card-title">«Род существительных латте и эспрессо»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">5И-6И, 2024-2025</h6>
                         <p class="card-text small">Определение грамматического рода заимствованных названий кофейных напитков.</p>
                     </div>
@@ -365,10 +340,10 @@
             </div>
 
             <!-- Проект 8 (без кнопки) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Архаизмы в произведениях А.С. Пушкина»</h5>
+                        <h5 class="card-title">«Архаизмы в произведениях А.С. Пушкина»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">5И-6И, 2024-2025</h6>
                         <p class="card-text small">Исследование знания значений архаизмов (например, зеница, десница, виждь и др.).</p>
                     </div>
@@ -379,12 +354,12 @@
             </div>
 
             <!-- Проект 9 (без кнопки) -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title"> «Глаголы ехать, бежать и встать в повелительном наклонении»</h5>
+                        <h5 class="card-title">«Глаголы ехать, бежать и встать в повелительном наклонении»</h5>
                         <h6 class="card-subtitle mb-2 text-muted-custom small">5И-6И, 2024-2025</h6>
-                        <p class="card-text small">Особенности образования форм повелительного наклонения и выявление наиболее «сложного» глагола для учашихся.</p>
+                        <p class="card-text small">Особенности образования форм повелительного наклонения и выявление наиболее «сложного» глагола для учащихся.</p>
                     </div>
                     <div class="card-footer">
                         <small>Выполнил: Владимир Вигель 5И</small>
