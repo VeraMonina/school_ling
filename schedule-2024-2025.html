@@ -2,283 +2,242 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Проекты — Лингвокружок 57</title>
+    <title>Расписание 2024–2025 — Лингвокружок 57</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        /* ===== ОБЩИЕ ===== */
         body {
-            background-color: #f8f9fa;
+            background: #f0f4f8;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a2a3a;
+        }
+
+        .container {
+            max-width: 1100px;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 2px 20px rgba(30, 80, 140, 0.08);
+            border-bottom: 1px solid rgba(160, 190, 220, 0.25);
         }
         .navbar-brand {
             font-weight: 600;
+            color: #1a4a7a !important;
+            letter-spacing: -0.3px;
+            font-size: 1.15rem;
         }
-        
-        /* ===== КАРТОЧКИ ===== */
-        .project-card {
-            transition: 0.2s ease-in-out;
-            border-left: 4px solid #0d6efd;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+        .navbar-brand i {
+            color: #3a7abd;
         }
-        .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
-        }
-        .project-card .card-title {
-            font-weight: 500;
-        }
-        .project-card .card-body {
-            flex: 1 1 auto;
-            display: flex;
-            flex-direction: column;
-        }
-        .project-card .card-text {
-            flex: 1 1 auto;
-        }
-        .project-card .card-footer {
-            background: transparent !important;
-            border: none !important;
-            padding-top: 0;
-        }
-
-        /* ===== КНОПКИ ===== */
-        .btn-outline-primary-custom {
-            color: #0d6efd;
-            border: 1px solid #0d6efd;
-            background: transparent;
-            border-radius: 40px;
-            padding: 0.25rem 1.2rem;
-            font-size: 0.8rem;
+        .nav-link {
+            color: #2a4a6a !important;
             font-weight: 450;
+            font-size: 0.85rem;
             transition: 0.2s;
-            cursor: pointer;
-            align-self: flex-start;
-            margin-top: 0.5rem;
+            border-radius: 30px;
+            padding: 0.35rem 0.9rem;
         }
-        .btn-outline-primary-custom:hover {
-            background: #0d6efd;
-            border-color: #0d6efd;
-            color: #fff;
+        .nav-link:hover {
+            background: rgba(58, 122, 189, 0.10);
+            color: #1a4a7a !important;
+        }
+        .nav-link i {
+            margin-right: 4px;
+            color: #5a8ab5;
+        }
+        .nav-item.active .nav-link {
+            background: rgba(58, 122, 189, 0.12);
+            color: #1a4a7a !important;
         }
 
-        /* ===== ДОПОЛНИТЕЛЬНЫЙ БЛОК ===== */
-        .extra-details {
-            display: none;
-            margin-top: 0.75rem;
-            padding-top: 0.75rem;
-            border-top: 1px solid #dee2e6;
-            font-size: 0.9rem;
+        /* ===== ХЛЕБНЫЕ КРОШКИ ===== */
+        .breadcrumb {
+            background: transparent;
+            padding: 0.75rem 0;
         }
-        .extra-details ul {
-            padding-left: 1.2rem;
-            margin-bottom: 0.3rem;
+        .breadcrumb-item a {
+            color: #3a7abd;
+        }
+        .breadcrumb-item.active {
+            color: #5a7a95;
+        }
+
+        /* ===== ДЖАМБОТРОНЫ ===== */
+        .jumbotron {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem;
+            box-shadow: 0 8px 40px rgba(30, 80, 140, 0.07), 0 2px 8px rgba(30, 80, 140, 0.03);
+            border: 1px solid rgba(180, 210, 235, 0.25);
+            transition: 0.2s;
+        }
+
+        /* ===== ЗАГОЛОВКИ ===== */
+        h1, h2, h3, h4, h5 {
+            color: #1a3a5a;
+            letter-spacing: -0.2px;
+        }
+        .display-5 {
+            font-size: 2.6rem;
+            font-weight: 600;
+        }
+        .display-5 .text-primary {
+            color: #3a7abd !important;
+            font-weight: 650;
+        }
+
+        /* ===== ТЕКСТ ===== */
+        p, li {
+            color: #2a4055;
+            line-height: 1.6;
+        }
+        .text-muted-custom {
+            color: #5a7a95;
+        }
+
+        /* ===== ТАБЛИЦА ===== */
+        .schedule-table th {
+            background-color: #eaf1f9;
+            color: #1a3a5a;
+            font-weight: 600;
+            border-color: #c5d9eb;
+        }
+        .schedule-table td {
+            border-color: #d5e3f0;
+            color: #2a4055;
+        }
+        .schedule-table {
+            border-color: #c5d9eb;
+        }
+        .schedule-table tbody tr:hover {
+            background-color: #f0f6fc;
+        }
+
+        /* ===== ФУТЕР ===== */
+        footer {
+            border-top: 1px solid #c5d9eb !important;
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #3a6a95 !important;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #3a7abd !important;
+            text-decoration: underline;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 576px) {
+            .jumbotron { padding: 1.5rem; }
+            .display-5 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
 <!-- ===== НАВИГАЦИЯ ===== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="index.html"><i class="bi bi-chat-quote-fill text-primary"></i> Лингвокружок 57</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-chat-quote-fill"></i> Лингвокружок 57
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule-2024-2025.html"><i class="bi bi-clock-history"></i> 2024–2025</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-67.html"><i class="bi bi-clock-history"></i> 2025–2026 6-7И</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-5.html"><i class="bi bi-clock-history"></i> 2025–2026 5И</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule-2026-2027.html"><i class="bi bi-calendar-plus"></i> 2026–2027</a></li>
-                <li class="nav-item active"><a class="nav-link" href="projects.html"><i class="bi bi-diagram-3"></i> Проекты</a></li>
-                <li class="nav-item"><a class="nav-link" href="materials.html"><i class="bi bi-paperclip"></i> Материалы</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item active"><a class="nav-link" href="schedule-2024-2025.html">2024–2025</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-67.html">2025–2026 6-7И</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-5.html">2025–2026 5И</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2026-2027.html">2026–2027</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
+                <li class="nav-item"><a class="nav-link" href="materials.html">Дополнительные материалы</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- ===== ПРОЕКТЫ ===== -->
+<!-- ===== РАСПИСАНИЕ ===== -->
 <main class="container py-4">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-            <li class="breadcrumb-item active">Проекты участников</li>
+            <li class="breadcrumb-item active">Расписание 2024–2025</li>
         </ol>
     </nav>
 
-    <div class="jumbotron bg-white">
-        <h1 class="display-5"><i class="bi bi-diagram-3 text-primary"></i> Проекты участников кружка</h1>
-        <hr class="my-4">
-
-        <div class="row">
-
-            <!-- Проект 1 (с кнопкой Подробнее) -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Замечаемость деривационных ошибок учениками 5-11 классов»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">старшая группа, 2025-2026</h6>
-                        <p class="card-text small">В рамках исследования были отобраны примеры из корпуса RLC, составлены анкеты и проведён эксперимент с участием школьников и взрослых.</p>
-
-                        <div class="extra-details" id="details1">
-                            <p class="small mb-1"><strong>Результаты показали:</strong></p>
-                            <ul class="small">
-                                <li>способность замечать и исправлять ошибки растёт с возрастом — от 52% у 5–7 классов до 85% у взрослых;</li>
-                                <li>чем чаще в языке встречается правильное слово, тем легче распознать его ошибочную форму;</li>
-                                <li>если слова длиннее своего нормативного дуплета, то они хуже «считываются» как ошибочные.</li>
-                            </ul>
-                            <p class="small text-muted mb-0">Проект был представлен 28-ого апреля на <b>международной конференции «Русский язык в многоязычном мире»</b>, которую ежегодно проводит Высшая школа экономики.</p>
-                        </div>
-
-                        <button class="btn-outline-primary-custom mt-2" onclick="toggleDetails('details1', this)">Подробнее</button>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Участники: Александра Иванова 6И; Юлия Ведерникова 7И; Кирилл Атутов 6И; Владимир Вигель 6И</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Проект 2 -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Вариативность в чтении примеров с умножением»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">младшая группа, 2025-2026</h6>
-                        <p class="card-text small">Была составлена анкета, в которой ребята смотрели на то, как школьники читают вслух математические выражения. Пример: 2*2 (дважды два; два на два; два умножить на два).</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Выполнили: Руслан Садыков 5И, Тимофей Халипов 5И</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Проект 3 -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Род аббревиатур русского языка»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">младшая группа, 2025-2026</h6>
-                        <p class="card-text small">Были выявлены «проблемные» аббревиатуры, и на их основании был проведен опрос.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Выполнила: Ульяна Разломалина 5И</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Проект 4 -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Исследование использования второго родительного падежа»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">младшая группа, 2025-2026</h6>
-                        <p class="card-text small">Анализ конкуренции форм слов, которые могут стоять как в первом родительном падеже, так и во втором родительном.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Выполнили: Платон Еремеев 5И, Михаил Гимон 5И</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Проект 5 -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Исследование прилагательных «туристический» vs «туристский»»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">5И-6И, 2024-2025</h6>
-                        <p class="card-text small">Различия в употреблении и сочетаемости слов «туристический» и «туристский».</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Выполнила: Вероника Острейко 6И</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Проект 6 -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Склонение составных числительных в косвенных падежах»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">5И-6И, 2024-2025</h6>
-                        <p class="card-text small">Исследование особенностей склонения сложных числительных, в которых часто допускают ошибки.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Выполнила: Юлия Ведерникова 6И</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Проект 7 -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Род существительных латте и эспрессо»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">5И-6И, 2024-2025</h6>
-                        <p class="card-text small">Определение грамматического рода заимствованных названий кофейных напитков.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Выполнила: Александра Иванова 5И</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Проект 8 -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Архаизмы в произведениях А.С. Пушкина»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">5И-6И, 2024-2025</h6>
-                        <p class="card-text small">Исследование знания значений архаизмов (например, зеница, десница, виждь и др.).</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Выполнил: Кирилл Атутов 5И</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Проект 9 -->
-            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">«Глаголы ехать, бежать и встать в повелительном наклонении»</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small">5И-6И, 2024-2025</h6>
-                        <p class="card-text small">Особенности образования форм повелительного наклонения и выявление наиболее «сложного» глагола для учащихся.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Выполнил: Владимир Вигель 5И</small>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /row -->
-    </div><!-- /jumbotron -->
+    <div class="jumbotron">
+        <h1 class="display-5">
+            <i class="bi bi-archive" style="color: #3a7abd;"></i> Расписание 2024–2025
+        </h1>
+        <p class="text-muted-custom">5–6 И классы · Пятница 16:00–17:00 · кабинет: 34. Преподаватели: В.Монина, А.Зеленская</p>
+        <hr class="my-4" style="border-color: #c5d9eb;">
+        
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered schedule-table">
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Тема занятия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>2 октября</td><td>Вводное занятие. Что такое лингвистика?</td></tr>
+                    <tr><td>9 октября</td><td>Фонетика 1. Природа звуков</td></tr>
+                    <tr><td>16 октября</td><td>Фонетика 2. Фонетический разбор</td></tr>
+                    <tr><td>23 октября</td><td>Корпусная лингвистика: НКРЯ</td></tr>
+                    <tr><td>6 ноября</td><td>Проекты</td></tr>
+                    <tr><td>13 ноября</td><td>Старославянский 1. История языка</td></tr>
+                    <tr><td>20 ноября</td><td>Старославянский 2. Имя существительное</td></tr>
+                    <tr><td>27 ноября</td><td>Старославянский 3. Временные формы глагола</td></tr>
+                    <tr><td>3 декабря</td><td>Разделение на две группы. Хамвал: иврит. Знаменка: итальянский</td></tr>
+                    <tr><td>11 декабря</td><td>Проекты</td></tr>
+                    <tr><td>18 декабря</td><td>Новогодняя игра</td></tr>
+                    <tr><td>15 января</td><td>Латынь и Гарри Поттер</td></tr>
+                    <tr><td>22 января</td><td>Диалектология 1. Общие понятия и карты</td></tr>
+                    <tr><td>29 января</td><td>Проекты</td></tr>
+                    <tr><td>5 февраля</td><td>Диалектология 2. Решение задач и корпус русских диалектов</td></tr>
+                    <tr><td>12 февраля</td><td>Усвоение языка 1</td></tr>
+                    <tr><td>19 февраля</td><td>Решение задач</td></tr>
+                    <tr><td>26 февраля</td><td>Нестандартные носители языка</td></tr>
+                    <tr><td>5 марта</td><td>Проекты</td></tr>
+                    <tr><td>12 марта</td><td>Социолингвистика: языковые контакты</td></tr>
+                    <tr><td>26 марта</td><td>Решение лингвистических задач</td></tr>
+                    <tr><td>1 апреля</td><td>Синтаксис 1. Составляющие</td></tr>
+                    <tr><td>9 апреля</td><td>Синтаксис 2. Синтаксические деревья и решение задач</td></tr>
+                    <tr><td>16 апреля</td><td>Решение задач</td></tr>
+                    <tr><td>30 апреля</td><td>Глоссирование и полисинтетизм</td></tr>
+                    <tr><td>7 мая</td><td>Проекты</td></tr>
+                    <tr><td>14 мая</td><td>Защита проектов и чаепитие</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </main>
 
 <!-- ===== ФУТЕР ===== -->
-<footer class="container text-center border-top pt-3 mt-3 pb-4">
-    <p class="text-muted small">
-        <i class="bi bi-envelope-fill"></i> По всем вопросам: 
-        <a href="mailto:lingvo57@school57.ru" class="text-muted">lingvo57@school57.ru</a>
+<footer class="container text-center">
+    <p class="text-muted-custom small">
+        <i class="bi bi-envelope-fill"></i> По всем вопросам:
+        <a href="mailto:vmonina@sch57.ru">vmonina@sch57.ru</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <i class="bi bi-telegram"></i>
+        <a href="https://t.me/vera_monina" target="_blank">@vera_monina</a>
     </p>
+    <p class="text-muted-custom small" style="opacity: 0.7;">&copy; Лингвистический кружок 57-й школы</p>
 </footer>
-
-<script>
-    function toggleDetails(detailsId, button) {
-        var details = document.getElementById(detailsId);
-        if (details.style.display === 'none' || details.style.display === '') {
-            details.style.display = 'block';
-            button.textContent = 'Скрыть';
-        } else {
-            details.style.display = 'none';
-            button.textContent = 'Подробнее';
-        }
-    }
-</script>
 
 </body>
 </html>
