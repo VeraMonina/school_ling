@@ -6,38 +6,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body { background-color: #f8f9fa; }
-        .navbar-brand { font-weight: 600; }
-        .upcoming-icon { font-size: 4rem; color: #0d6efd; }
+        /* ===== ОБЩИЕ ===== */
+        body {
+            background: #f0f4f8;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a2a3a;
+        }
+
+        .container {
+            max-width: 1100px;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 2px 20px rgba(30, 80, 140, 0.08);
+            border-bottom: 1px solid rgba(160, 190, 220, 0.25);
+        }
+        .navbar-brand {
+            font-weight: 600;
+            color: #1a4a7a !important;
+            letter-spacing: -0.3px;
+            font-size: 1.15rem;
+        }
+        .nav-link {
+            color: #2a4a6a !important;
+            font-weight: 450;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            border-radius: 30px;
+            padding: 0.35rem 0.9rem;
+        }
+        .nav-link:hover {
+            background: rgba(58, 122, 189, 0.10);
+            color: #1a4a7a !important;
+        }
+        .nav-item.active .nav-link {
+            background: rgba(58, 122, 189, 0.12);
+            color: #1a4a7a !important;
+        }
+
+        /* ===== ХЛЕБНЫЕ КРОШКИ ===== */
+        .breadcrumb {
+            background: transparent;
+            padding: 0.75rem 0;
+        }
+        .breadcrumb-item a {
+            color: #3a7abd;
+        }
+        .breadcrumb-item.active {
+            color: #5a7a95;
+        }
+
+        /* ===== ДЖАМБОТРОНЫ ===== */
+        .jumbotron {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem;
+            box-shadow: 0 8px 40px rgba(30, 80, 140, 0.07), 0 2px 8px rgba(30, 80, 140, 0.03);
+            border: 1px solid rgba(180, 210, 235, 0.25);
+            transition: 0.2s;
+        }
+
+        /* ===== ЗАГОЛОВКИ ===== */
+        h1, h2, h3, h4, h5 {
+            color: #1a3a5a;
+            letter-spacing: -0.2px;
+        }
+        .display-5 {
+            font-size: 2.6rem;
+            font-weight: 600;
+        }
+        .display-5 .text-primary {
+            color: #3a7abd !important;
+            font-weight: 650;
+        }
+
+        /* ===== ТЕКСТ ===== */
+        p, li {
+            color: #2a4055;
+            line-height: 1.6;
+        }
+        .text-muted-custom {
+            color: #5a7a95;
+        }
+
+        /* ===== ИКОНКА ===== */
+        .upcoming-icon {
+            font-size: 4rem;
+            color: #3a7abd;
+        }
+
+        /* ===== ФУТЕР ===== */
+        footer {
+            border-top: 1px solid #c5d9eb !important;
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #3a6a95 !important;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #3a7abd !important;
+            text-decoration: underline;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 576px) {
+            .jumbotron { padding: 1.5rem; }
+            .display-5 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
 
-<!-- НАВИГАЦИЯ -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+<!-- ===== НАВИГАЦИЯ ===== -->
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="index.html"><i class="bi bi-chat-quote-fill text-primary"></i> Лингвокружок 57</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <a class="navbar-brand" href="index.html">
+            Лингвокружок 57
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule-2024-2025.html"><i class="bi bi-clock-history"></i> 2024–2025</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-67.html"><i class="bi bi-clock-history"></i> 2025–2026 6-7И</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-5.html"><i class="bi bi-clock-history"></i> 2025–2026 5И</a></li>
-                <li class="nav-item active"><a class="nav-link" href="schedule-2026-2027.html"><i class="bi bi-calendar-plus"></i> 2026–2027</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-diagram-3"></i> Проекты</a></li>
-                <li class="nav-item"><a class="nav-link" href="materials.html"><i class="bi bi-paperclip"></i> Материалы</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item active"><a class="nav-link" href="schedule-2026-2027.html">2026–27</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-67.html">Архив 2025–26 стр.</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-5.html">Архив 2025–26 млд.</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2024-2025.html">Архив 2024–25</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
+                <li class="nav-item"><a class="nav-link" href="materials_extra.html">Дополнительные материалы</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- РАСПИСАНИЕ -->
+<!-- ===== РАСПИСАНИЕ ===== -->
 <main class="container py-4">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -46,27 +159,31 @@
         </ol>
     </nav>
 
-    <div class="jumbotron bg-white text-center py-5">
+    <div class="jumbotron text-center py-5">
         <div class="upcoming-icon mb-3">
             <i class="bi bi-calendar-plus"></i>
         </div>
-        <h1 class="display-4">Расписание 2026–2027</h1>
-        <p class="lead text-muted">готовится к публикации</p>
-        <hr class="my-4 w-50 mx-auto">
-        <p class="text-secondary">Ориентировочное начало занятий — <strong>сентябрь 2026</strong>.</p>
-        <p class="text-secondary">Следите за обновлениями на этой странице.</p>
-        <div class="alert alert-info d-inline-block mt-3">
+        <h1 class="display-5">Расписание 2026–2027</h1>
+        <p class="lead text-muted-custom">готовится к публикации</p>
+        <hr class="my-4 w-50 mx-auto" style="border-color: #c5d9eb;">
+        <p class="text-muted-custom">Ориентировочное начало занятий — <strong>сентябрь 2026</strong>.</p>
+        <p class="text-muted-custom">Следите за обновлениями на этой странице.</p>
+        <div class="alert alert-info d-inline-block mt-3" style="background: #eaf1f9; border-color: #b0cfe0; color: #1a4a7a;">
             <i class="bi bi-info-circle-fill"></i> Расписание будет опубликовано после утверждения
         </div>
     </div>
 </main>
 
-<!-- ФУТЕР -->
-<footer class="container text-center border-top pt-3 mt-3 pb-4">
-    <p class="text-muted small">
-        <i class="bi bi-envelope-fill"></i> По всем вопросам: 
-        <a href="mailto:lingvo57@school57.ru" class="text-muted">lingvo57@school57.ru</a>
+<!-- ===== ФУТЕР ===== -->
+<footer class="container text-center">
+    <p class="text-muted-custom small">
+        <i class="bi bi-envelope-fill"></i> По всем вопросам:
+        <a href="mailto:vmonina@sch57.ru">vmonina@sch57.ru</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <i class="bi bi-telegram"></i>
+        <a href="https://t.me/vera_monina" target="_blank">@vera_monina</a>
     </p>
+    <p class="text-muted-custom small" style="opacity: 0.7;">&copy; Лингвистический кружок 57-й школы</p>
 </footer>
 
 </body>
