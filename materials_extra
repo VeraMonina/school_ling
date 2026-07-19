@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дополнительные материалы — Лингвокружок 57</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* ===== ОБЩИЕ ===== */
+        body {
+            background: #f0f4f8;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a2a3a;
+        }
+
+        .container {
+            max-width: 1100px;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 2px 20px rgba(30, 80, 140, 0.08);
+            border-bottom: 1px solid rgba(160, 190, 220, 0.25);
+        }
+        .navbar-brand {
+            font-weight: 600;
+            color: #1a4a7a !important;
+            letter-spacing: -0.3px;
+            font-size: 1.15rem;
+        }
+        .navbar-brand i {
+            color: #3a7abd;
+        }
+        .nav-link {
+            color: #2a4a6a !important;
+            font-weight: 450;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            border-radius: 30px;
+            padding: 0.35rem 0.9rem;
+        }
+        .nav-link:hover {
+            background: rgba(58, 122, 189, 0.10);
+            color: #1a4a7a !important;
+        }
+        .nav-link i {
+            margin-right: 4px;
+            color: #5a8ab5;
+        }
+        .nav-item.active .nav-link {
+            background: rgba(58, 122, 189, 0.12);
+            color: #1a4a7a !important;
+        }
+
+        /* ===== ХЛЕБНЫЕ КРОШКИ ===== */
+        .breadcrumb {
+            background: transparent;
+            padding: 0.75rem 0;
+        }
+        .breadcrumb-item a {
+            color: #3a7abd;
+        }
+        .breadcrumb-item.active {
+            color: #5a7a95;
+        }
+
+        /* ===== ДЖАМБОТРОНЫ ===== */
+        .jumbotron {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.5rem 2.5rem;
+            box-shadow: 0 8px 40px rgba(30, 80, 140, 0.07), 0 2px 8px rgba(30, 80, 140, 0.03);
+            border: 1px solid rgba(180, 210, 235, 0.25);
+            transition: 0.2s;
+        }
+
+        /* ===== ЗАГОЛОВКИ ===== */
+        h1, h2, h3, h4, h5 {
+            color: #1a3a5a;
+            letter-spacing: -0.2px;
+        }
+        .display-5 {
+            font-size: 2.6rem;
+            font-weight: 600;
+        }
+
+        /* ===== ТЕКСТ ===== */
+        p, li {
+            color: #2a4055;
+            line-height: 1.6;
+        }
+        .text-muted-custom {
+            color: #5a7a95;
+        }
+
+        /* ===== КАРТОЧКИ ===== */
+        .material-card {
+            border-radius: 16px;
+            border: 1px solid rgba(180, 210, 235, 0.25);
+            background: #f8fafc;
+            transition: 0.25s ease-in-out;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .material-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(30, 80, 140, 0.08);
+            border-color: rgba(58, 122, 189, 0.3);
+        }
+        .material-card .card-body {
+            padding: 1.5rem;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .material-card .card-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #1a3a5a;
+            margin-bottom: 0.5rem;
+        }
+        .material-card .card-title i {
+            color: #3a7abd;
+            margin-right: 8px;
+        }
+        .material-card .card-text {
+            color: #2a4055;
+            flex: 1 1 auto;
+        }
+        .material-card .card-text small {
+            color: #5a7a95;
+        }
+        .material-card .card-footer {
+            background: transparent !important;
+            border: none !important;
+            padding: 0 1.5rem 1.25rem 1.5rem;
+        }
+
+        /* ===== БЕЙДЖИ ===== */
+        .badge-olympiad {
+            background: #eaf1f9;
+            color: #1a4a7a;
+            padding: 0.25rem 0.75rem;
+            border-radius: 40px;
+            font-weight: 450;
+            font-size: 0.75rem;
+            margin-right: 4px;
+        }
+
+        /* ===== КНОПКИ ===== */
+        .btn-outline-primary-custom {
+            color: #1a4a7a;
+            border: 1px solid #b0cfe0;
+            background: transparent;
+            border-radius: 40px;
+            padding: 0.25rem 1.2rem;
+            font-size: 0.8rem;
+            font-weight: 450;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-outline-primary-custom:hover {
+            background: #eaf1f9;
+            border-color: #3a7abd;
+            color: #1a4a7a;
+            text-decoration: none;
+        }
+
+        /* ===== ПОДКАСТЫ ===== */
+        .podcast-block {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 1.5rem;
+            border-left: 4px solid #3a7abd;
+            margin-bottom: 1.5rem;
+        }
+        .podcast-block:last-child {
+            margin-bottom: 0;
+        }
+        .podcast-block h5 {
+            margin-bottom: 0.25rem;
+        }
+
+        /* ===== ФУТЕР ===== */
+        footer {
+            border-top: 1px solid #c5d9eb !important;
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #3a6a95 !important;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #3a7abd !important;
+            text-decoration: underline;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 576px) {
+            .jumbotron { padding: 1.5rem; }
+            .display-5 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== НАВИГАЦИЯ ===== -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-chat-quote-fill"></i> Лингвокружок 57
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2024-2025.html">2024–2025</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-67.html">2025–2026 6-7И</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2025-2026-5.html">2025–2026 5И</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule-2026-2027.html">2026–2027</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
+                <li class="nav-item active"><a class="nav-link" href="materials.html">Дополнительные материалы</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== МАТЕРИАЛЫ ===== -->
+<main class="container py-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item active">Дополнительные материалы</li>
+        </ol>
+    </nav>
+
+    <div class="jumbotron">
+        <h1 class="display-5">
+            <i class="bi bi-paperclip" style="color: #3a7abd;"></i> Дополнительные материалы
+        </h1>
+        <p class="text-muted-custom">Подборка полезных ресурсов для тех, кто хочет больше узнать о лингвистике</p>
+        <hr class="my-4" style="border-color: #c5d9eb;">
+
+        <!-- ===== ОЛИМПИАДЫ ===== -->
+        <h2 class="section-title"><i class="bi bi-trophy" style="color: #3a7abd;"></i> Лингвистические олимпиады</h2>
+
+        <div class="row">
+
+            <!-- Русский медвежонок -->
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-paw"></i>Русский медвежонок</h5>
+                        <p class="card-text small">Олимпиада, посвящённая только русскому языку. Задания всегда интересные и нестандартные.</p>
+                        <div class="mt-auto">
+                            <span class="badge-olympiad">2–11 классы</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://русскиймедвежонок.рф/index.htm" target="_blank" class="btn-outline-primary-custom">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Традиционная олимпиада по лингвистике -->
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-building"></i>Традиционная олимпиада по лингвистике</h5>
+                        <p class="card-text small">Олимпиада от МГУ. Задачи на разные языки и языковые явления. Некоторые задачи мы разбирали на занятиях.</p>
+                        <div class="mt-auto">
+                            <span class="badge-olympiad">8–11 классы</span>
+                            <span class="badge-olympiad">МГУ</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://ling.olimpiada.ru" target="_blank" class="btn-outline-primary-custom">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Устная олимпиада по лингвистике -->
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-mic"></i>Устная олимпиада по лингвистике</h5>
+                        <p class="card-text small">Олимпиада от НИУ ВШЭ. Задачи на разные языки. Иногда встречаются задания, для которых нужно что-то послушать или посмотреть.</p>
+                        <div class="mt-auto">
+                            <span class="badge-olympiad">8–11 классы</span>
+                            <span class="badge-olympiad">ВШЭ</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://ling.hse.ru/junior/uol" target="_blank" class="btn-outline-primary-custom">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ===== ДРУГИЕ ОЛИМПИАДЫ ===== -->
+        <div class="podcast-block mt-3">
+            <h5><i class="bi bi-list-check" style="color: #3a7abd;"></i> Другие олимпиады</h5>
+            <p class="mb-0 small">Всерос по русскому языку, Высшая проба по русскому языку, турнир Ломоносова. Подробнее — на <a href="https://ling.olimpiada.ru/olymps" target="_blank" style="color: #3a7abd;">странице олимпиад</a>.</p>
+        </div>
+
+        <hr class="my-4" style="border-color: #c5d9eb;">
+
+        <!-- ===== СИРИУС ===== -->
+        <h2 class="section-title"><i class="bi bi-stars" style="color: #3a7abd;"></i> Онлайн-курсы и школы</h2>
+
+        <div class="row">
+            <!-- Сириус -->
+            <div class="col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-rocket-takeoff"></i>Сириус. Курсы</h5>
+                        <p class="card-text small">Очень крутые курсы по лингвистике! Рекомендуем для 9-х классов и старше.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://edu.sirius.online" target="_blank" class="btn-outline-primary-custom">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ЛЛШ -->
+            <div class="col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-sun"></i>Летняя лингвистическая школа</h5>
+                        <p class="card-text small">Обычно берут с 8-го класса, но в исключительных случаях — с 7-го. Есть группа ВКонтакте и канал в Телеграме.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://ling.olimpiada.ru/llsh" target="_blank" class="btn-outline-primary-custom">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4" style="border-color: #c5d9eb;">
+
+        <!-- ===== РЕШЕНИЕ ЗАДАЧ ===== -->
+        <h2 class="section-title"><i class="bi bi-puzzle" style="color: #3a7abd;"></i> Решение задач</h2>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-lightbulb"></i>LingProblems</h5>
+                        <p class="card-text small">Сайт с лингвистическими задачами. Можно сортировать по языку, явлению или по определённой олимпиаде.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://lingproblems.online" target="_blank" class="btn-outline-primary-custom">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4" style="border-color: #c5d9eb;">
+
+        <!-- ===== ПОДКАСТЫ ===== -->
+        <h2 class="section-title"><i class="bi bi-headphones" style="color: #3a7abd;"></i> Подкасты о лингвистике</h2>
+
+        <div class="podcast-block">
+            <h5>🌟 Розенталь и Гильденстерн</h5>
+            <p class="small mb-1">Больше 70 выпусков о лингвистике и русском языке. Все выпуски в среднем длятся 45 минут. Точно найдётся что-то на ваш вкус!</p>
+            <a href="https://rozental.mave.digital" target="_blank" style="color: #3a7abd;" class="small">Слушать →</a>
+        </div>
+
+        <div class="podcast-block">
+            <h5>🌟 Лингвоподкаст</h5>
+            <p class="small mb-1">Не такое большое количество выпусков, но темы более сложные и глубокие. Например, в 2022 году вышло много выпусков про диалектологию (южные, северные и среднерусские говоры). Всего около 60 выпусков, и все отличные!</p>
+            <a href="https://lingvopodcast.mave.digital" target="_blank" style="color: #3a7abd;" class="small">Слушать →</a>
+        </div>
+
+        <div class="podcast-block">
+            <h5>🌟 Глагольная группа</h5>
+            <p class="small mb-1">Подкаст о редких и необычных языках. Можно послушать про диалектологию или про отдельные языки, например, вепсский и мансийский.</p>
+            <a href="https://glagolgruppa.mave.digital" target="_blank" style="color: #3a7abd;" class="small">Слушать →</a>
+        </div>
+
+        <hr class="my-4" style="border-color: #c5d9eb;">
+
+        <!-- ===== КНИГИ ===== -->
+        <h2 class="section-title"><i class="bi bi-book" style="color: #3a7abd;"></i> Книги</h2>
+
+        <div class="podcast-block" style="border-left-color: #3a7abd;">
+            <h5>📖 «Поймать вавилонскую рыбку»</h5>
+            <p class="small mb-1">Человеческий мозг, нейронные сети и изучение иностранных языков. В книге показывается, что все эти области взаимосвязаны. Очень интересная, написана не сложным языком!</p>
+            <p class="small text-muted-custom mb-0">Рекомендуем к прочтению всем, кто интересуется языком и тем, как он работает в мозге.</p>
+        </div>
+
+    </div>
+</main>
+
+<!-- ===== ФУТЕР ===== -->
+<footer class="container text-center">
+    <p class="text-muted-custom small">
+        <i class="bi bi-envelope-fill"></i> По всем вопросам:
+        <a href="mailto:vmonina@sch57.ru">vmonina@sch57.ru</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <i class="bi bi-telegram"></i>
+        <a href="https://t.me/vera_monina" target="_blank">@vera_monina</a>
+    </p>
+    <p class="text-muted-custom small" style="opacity: 0.7;">&copy; Лингвистический кружок 57-й школы</p>
+</footer>
+
+</body>
+</html>
