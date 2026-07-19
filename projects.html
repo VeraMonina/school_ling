@@ -12,14 +12,48 @@
     <style>
         /* ===== ОБЩИЕ ===== */
         body {
-            background: #fdf6f0;
+            background: #f0f4f8;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: #3d2e26;
+            color: #1a2a3a;
         }
 
         .container {
             max-width: 1100px;
         }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 2px 20px rgba(30, 80, 140, 0.08);
+            border-bottom: 1px solid rgba(160, 190, 220, 0.25);
+        }
+        .navbar-brand {
+            font-weight: 600;
+            color: #1a4a7a !important;
+            letter-spacing: -0.3px;
+            font-size: 1.15rem;
+        }
+        .navbar-brand i {
+            color: #3a7abd;
+        }
+        .nav-link {
+            color: #2a4a6a !important;
+            font-weight: 450;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            border-radius: 30px;
+            padding: 0.35rem 0.9rem;
+        }
+        .nav-link:hover {
+            background: rgba(58, 122, 189, 0.10);
+            color: #1a4a7a !important;
+        }
+        .nav-link i {
+            margin-right: 4px;
+            color: #5a8ab5;
+        }
+
 
         /* ===== НАВИГАЦИЯ ===== */
         .navbar {
@@ -57,22 +91,23 @@
         }
 
         /* ===== ДЖАМБОТРОНЫ ===== */
+       /* ===== ДЖАМБОТРОНЫ ===== */
         .jumbotron {
             background: #ffffff;
             border-radius: 24px;
             padding: 2.5rem 2.5rem;
-            box-shadow: 0 8px 40px rgba(160, 110, 70, 0.07), 0 2px 8px rgba(160, 110, 70, 0.03);
-            border: 1px solid rgba(230, 200, 175, 0.25);
+            box-shadow: 0 8px 40px rgba(30, 80, 140, 0.07), 0 2px 8px rgba(30, 80, 140, 0.03);
+            border: 1px solid rgba(180, 210, 235, 0.25);
             transition: 0.2s;
         }
         .jumbotron-warm {
-            background: linear-gradient(145deg, #fff8f0, #ffefe4);
-            border: 1px solid rgba(235, 195, 165, 0.3);
+            background: linear-gradient(145deg, #f0f6fc, #e3edf7);
+            border: 1px solid rgba(160, 200, 235, 0.3);
         }
 
         /* ===== ЗАГОЛОВКИ ===== */
         h1, h2, h3, h4, h5 {
-            color: #4d3425;
+            color: #1a3a5a;
             letter-spacing: -0.2px;
         }
         .display-5 {
@@ -80,67 +115,45 @@
             font-weight: 600;
         }
         .display-5 .text-primary {
-            color: #b67344 !important;
+            color: #3a7abd !important;
             font-weight: 650;
         }
         .section-title {
-            border-bottom: 2px solid #ecd9cb;
+            border-bottom: 2px solid #c5d9eb;
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
-            color: #4d3425;
+            color: #1a3a5a;
         }
-
+        
         /* ===== ТЕКСТ ===== */
         p, li {
-            color: #4d3a2e;
+            color: #2a4055;
             line-height: 1.6;
         }
         .text-muted-custom {
-            color: #8a7060;
+            color: #5a7a95;
         }
 
         /* ===== КАРТОЧКИ ===== */
-        .project-card {
-            transition: 0.25s ease-in-out;
-            border-left: 4px solid #c6794a;
+        .feature-icon {
+            font-size: 1.4rem;
+            color: #3a7abd;
+            width: 2rem;
+            text-align: center;
+        }
+        .highlight-box {
+            background: #eaf1f9;
             border-radius: 16px;
-            background: #ffffff;
-            box-shadow: 0 2px 12px rgba(160, 110, 70, 0.06);
-            border: 1px solid rgba(230, 200, 175, 0.25);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            padding: 1.5rem 1.8rem;
+            border-left: 4px solid #4a8acd;
         }
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(160, 110, 70, 0.10);
-            border-color: rgba(198, 121, 74, 0.3);
-        }
-        .project-card .card-body {
-            flex: 1 1 auto;
-            padding: 1.5rem;
-        }
-        .project-card .card-title {
-            font-weight: 550;
-            font-size: 1.1rem;
-            color: #4d3425;
-        }
-        .project-card .card-title i {
-            color: #c6794a !important;
-        }
-        .project-card .card-subtitle {
-            color: #8a7060 !important;
-        }
-        .project-card .card-text {
-            color: #5a4033;
-        }
-        .project-card .card-footer {
-            padding: 0.75rem 1.5rem 1.25rem;
-            background: transparent !important;
-            border: none !important;
-        }
-        .project-card .card-footer small {
-            color: #8a7060 !important;
+        .badge-soft {
+            background: #d5e3f0;
+            color: #1a4a7a;
+            padding: 0.35rem 0.9rem;
+            border-radius: 40px;
+            font-weight: 450;
+            font-size: 0.8rem;
         }
 
         /* ===== КНОПКИ ===== */
